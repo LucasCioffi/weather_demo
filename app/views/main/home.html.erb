@@ -1,0 +1,15 @@
+<div class="row-fluid">
+  <div class="col-md-6 offset-md-3 col-10 offset-1 mt-5">
+    <h1>Local Weather</h1>
+    Enter your address:<br>
+    
+
+    <%= form_with url: '/submit_address', remote: true do |form| %>
+      <%= form.text_field :address %>
+      <%= form.hidden_field :authenticity_token, value: form_authenticity_token %>
+      <%= form.submit "Submit" %>
+    <% end %>
+    <br><br>
+    <div id="weather-info">
+    </div>
+</div>

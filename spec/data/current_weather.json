@@ -1,0 +1,16 @@
+{
+  "coord": {"lon": -73.8138, "lat": 41},
+  "weather": [{"id": 500, "main": "Rain", "description": "light rain", "icon": "10d"}],
+  "base": "stations",
+  "main": {"temp": 47.66, "feels_like": 46.62, "temp_min": 45.86, "temp_max": 49.77, "pressure": 1012, "humidity": 85},
+  "visibility": 10000,
+  "wind": {"speed": 3.44, "deg": 150},
+  "rain": {"1h": 0.42},
+  "clouds": {"all": 100},
+  "dt": 1715513686,
+  "sys": {"type": 2, "id": 2007144, "country": "US", "sunrise": 1715506800, "sunset": 1715558600},
+  "timezone": -14400,
+  "id": 5119405,
+  "name": "Greenville",
+  "cod": 200
+}

@@ -1,0 +1,39 @@
+#weather-location {
+  text-align: right;
+  margin-bottom: 1em;
+}
+
+.current-temp {
+  font-weight: bold;
+  font-size: 2em;
+  position: relative;
+  top: 8px;
+}
+
+.high_temp {
+  margin-right: 30px;
+}
+
+.forecast-snapshot {
+  margin-bottom: 20px;
+}
+
+#current-weather {
+  margin-bottom: 40px;
+}
+
+#current-weather-heading {
+  font-weight: bold;
+  position: relative;
+  top: 15px;
+}
+
+#forecast {
+  margin-bottom: 40px;
+}
+
+#cached-results-indicator {
+  background: yellow;
+  padding: 5px;
+  border-radius: 20%;
+}

@@ -1,0 +1,42 @@
+<% if @error_message.present? %>
+  <div id="weather-info" margin-bottom:50px;">
+    <div id="weather-info-error">
+      <%= @error_message %>
+    </div>
+  </div>
+<% else %>
+  <div id="weather-info" style="background:#d3f4ff; padding:10px; margin-bottom:50px;">
+    <div id="weather-location">
+      <% if @county.blank? %>
+        <%= @display_name %>
+      <% else %>
+        <b><%= @municipality %><%= @postal_code.present? ? " | #{@postal_code}" : '' %></b><br>
+        <%= @county %>, <%= @country %>
+      <% end %>
+    </div>
+
+    <span id="cached-results-indicator" class="<%= @fresh_results ? 'd-none' : '' %>">Cached</span><br>
+
+    <div id="current-weather">
+      <span id="current-weather-heading">Current Weather</span><br>
+      <span class="current-temp"><%= weather["main"]["temp"].to_i %><%= @units == 'imperial' ? '°F' : '°C' %></span>
+      <img src="http://openweathermap.org/img/w/<%= weather["weather"][0]["icon"] %>.png">
+      <%= weather["weather"][0]["description"].titleize %><br>
+      <span class="high_temp">High: <%= weather["main"]["temp_max"].to_i %><%= @units == 'imperial' ? '°F' : '°C' %></span>
+      Low: <%= weather["main"]["temp_min"].to_i %><%= @units == 'imperial' ? '°F' : '°C' %><br>
+    </div>
+
+    <div id="forecast">
+      <b>Forecast</b><br>
+      <% @forecast["list"].each do |three_hour_forecast| %>
+        <div class="forecast-snapshot">
+          <% datetime = "#{three_hour_forecast['dt_txt']} UTC".to_datetime.in_time_zone(@time_zone_name) %>
+          <%= datetime.strftime("%B %d, %-l%P") %><br>
+          <img src="http://openweathermap.org/img/w/<%= three_hour_forecast["weather"][0]["icon"] %>.png">
+          <%= three_hour_forecast["main"]["temp"].to_i %><%= @units == 'imperial' ? '°F' : '°C' %>
+          <%= three_hour_forecast["weather"][0]["description"] %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
