@@ -3,6 +3,8 @@
 ## Setup
 With this app, you can enter an address and get the current weather and forecast for many addresses across the world.  It will show the forecast in the forecasted time in the local timezone.  It will show the units in imperial/metric based on the country of the address you enter.
 
+You can try an online demo of the app [here](https://weather-demo-app-8d74bfa0f23e.herokuapp.com/).
+
 No database is necessary.  Setup instructions are below.  Here is a screenshot of the UI:
 
 ![Screenshot of the app showing the current weather and forecast for a location](app/assets/images/weather_app_screenshot.png)
