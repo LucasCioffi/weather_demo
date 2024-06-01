@@ -1,6 +1,8 @@
 # README
 
 ## Setup
+This is a demo of my software skills to show clean code patterns using Rails 7, Hotwire & Stimulus, RSpec, and a WeatherApiService that accesses OpenWeatherMap's API.
+
 With this app, you can enter an address and get the current weather and forecast for many addresses across the world.  It will show the forecast in the forecasted time in the local timezone.  It will show the units in imperial/metric based on the country of the address you enter.
 
 You can try an online demo of the app [here](https://weather-demo-app-8d74bfa0f23e.herokuapp.com/).
